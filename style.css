@@ -227,6 +227,10 @@ main.about {
   align-items: start;
 }
 
+.about-grid .portrait {
+  width: 220px;
+}
+
 .about-coop {
   border-left: 1px solid var(--rule);
   padding-left: 3rem;
@@ -257,7 +261,7 @@ main.home {
 .hero {
   padding-top: 0.75rem;
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 3rem;
 }
 
@@ -266,16 +270,26 @@ main.home {
   min-width: 0;
 }
 
-.hero-photo {
+.hero-photo-wrap {
+  position: relative;
   width: min(254px, 38%);
-  height: auto;
+  align-self: stretch;
+  overflow: hidden;
   border: 1px solid var(--rule);
+}
+
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 ul.way {
   list-style: none;
   padding: 0;
-  margin: 0 0 2.5rem;
+  margin: 0;
 }
 
 ul.way li {
@@ -396,9 +410,17 @@ footer.site a:hover {
     gap: 0;
   }
 
-  .hero-photo {
+  .hero-photo-wrap {
+    position: static;
     width: min(220px, 60%);
     margin-top: 2rem;
     order: 1;
+    align-self: auto;
+  }
+
+  .hero-photo {
+    position: static;
+    width: 100%;
+    height: auto;
   }
 }
