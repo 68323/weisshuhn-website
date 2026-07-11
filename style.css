@@ -271,7 +271,9 @@ main.home {
 }
 
 .hero-photo {
+  flex: 0 0 auto;
   width: min(254px, 38%);
+  min-width: 0;
   height: auto;
   border: 1px solid var(--rule);
 }
