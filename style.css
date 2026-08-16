@@ -231,10 +231,6 @@ main.about {
   width: 220px;
 }
 
-.about-coop {
-  border-left: 1px solid var(--rule);
-}
-
 .section-firm {  margin: 0 0 1.25rem;
 }
 
